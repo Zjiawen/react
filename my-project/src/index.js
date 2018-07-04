@@ -5,6 +5,8 @@ import registerServiceWorker from './registerServiceWorker';
 import Xheader from './components/header/xheader';
 import Xpanel from './components/xpanel';
 import Xsearch from './components/xsearch';
+import Xlifecycle from './components/xlifecycle';
+
 
 import './all.css';
 
@@ -45,6 +47,7 @@ ReactDOM.render(
             <Xheader />
             <Xsearch />
             <Xpanel />
+            <Xlifecycle />
         </div>
     </Provider>,
     document.getElementById('root')
