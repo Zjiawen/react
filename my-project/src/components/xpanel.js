@@ -31,7 +31,7 @@ class Xpanel extends React.Component {
             <div className="weui-panel__bd">
                 {(function(self){
                     return self.state.arr.map(function(i,idx){
-                        return <a href="javascript:void(0);" className="weui-media-box weui-media-box_appmsg" key={idx}>
+                        return <a href="/detail" className="weui-media-box weui-media-box_appmsg" key={idx}>
                             <div onClick={self.props.showGallery.bind(this,1)} className="weui-media-box__hd">
                                 <img className="weui-media-box__thumb" src={i.imgSrc} alt="" />
                             </div>

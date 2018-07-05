@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+
+import Home from './pages/home';
+import Detail from './pages/detail';
 
 import registerServiceWorker from './registerServiceWorker';
-import Xheader from './components/header/xheader';
-import Xpanel from './components/xpanel';
-import Xsearch from './components/xsearch';
-import Xlifecycle from './components/xlifecycle';
-
 
 import './all.css';
 
@@ -42,14 +41,14 @@ const store = createStore((state = {
 });
 
 ReactDOM.render(
-    <Provider store={store}>
-        <div>
-            <Xheader />
-            <Xsearch />
-            <Xpanel />
-            <Xlifecycle />
-        </div>
-    </Provider>,
+    <Router>
+        <Provider store={store}>
+            <div>
+                <Route exact path='/' component={Home} />
+                <Route path='/detail' component={Detail} />
+            </div>
+        </Provider>
+    </Router>,
     document.getElementById('root')
 );
 registerServiceWorker();
